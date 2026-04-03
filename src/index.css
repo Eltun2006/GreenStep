@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "leaflet/dist/leaflet.css";
+
 /* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
@@ -69,4 +71,39 @@ input[type='range']::-moz-range-thumb {
     color: #f87171;
     text-shadow: 0 0 16px rgba(248, 113, 113, 0.7);
   }
+}
+
+/* Leaflet Dark Mode Filter */
+.leaflet-container {
+  background: #030712 !important;
+  height: 100%;
+  width: 100%;
+  border-radius: 24px;
+}
+
+.leaflet-tile-pane {
+  filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
+}
+
+.leaflet-control-attribution {
+  display: none !important;
+}
+
+.leaflet-bar {
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 12px !important;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.5) !important;
+  backdrop-filter: blur(10px);
+}
+
+.leaflet-bar a {
+  background-color: transparent !important;
+  color: #fff !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.leaflet-bar a:hover {
+  background-color: rgba(52, 211, 153, 0.2) !important;
+  color: #10b981 !important;
 }
