@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: #030712;
+  color: #f1f5f9;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Custom Scrollbar ─────────────────────────────────── */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 99px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* ── Range Slider Thumb ───────────────────────────────── */
+input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 0;
+  width: 0;
+}
+
+input[type='range']::-moz-range-thumb {
+  height: 0;
+  width: 0;
+  border: none;
+  background: transparent;
+}
+
+/* ── Neon Utilities ───────────────────────────────────── */
+@layer utilities {
+  .neon-green {
+    color: #34d399;
+    text-shadow: 0 0 16px rgba(52, 211, 153, 0.7);
+  }
+
+  .neon-blue {
+    color: #60a5fa;
+    text-shadow: 0 0 16px rgba(96, 165, 250, 0.7);
+  }
+
+  .neon-red {
+    color: #f87171;
+    text-shadow: 0 0 16px rgba(248, 113, 113, 0.7);
+  }
+}
